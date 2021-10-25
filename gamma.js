@@ -13,5 +13,5 @@ function on_device_orientation(evt){
     context.clearRect(0, 0, canvas.width, canvas.height);
     context.fillStyle = "#6A0888";
     context.beginPath();
-    context.fillRect(evt.gamma, evt.gamma ,evt.gamma, evt.gamma);
+    context.fillRect(centru.x, centru.y ,evt.gamma * latura_patrat, evt.gamma * latura_patrat);
 }
