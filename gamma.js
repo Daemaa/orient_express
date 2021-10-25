@@ -9,13 +9,10 @@ function on_device_orientation(evt){
     var canvas = document.getElementById("canvas");
     var context = canvas.getContext("2d");
     var centru = {x:canvas.width/2, y:canvas.height/2}
-    var latura_patrat = 100;
+    var latura_patrat = 20;
     context.clearRect(0, 0, canvas.width, canvas.height);
-    context.translate(centru.x/2, centru.y/2);
     context.fillStyle = "#228B22";
     context.beginPath();
-    context.fillRect(centru.x, centru.y ,(evt.gamma * 2) + latura_patrat, (evt.gamma * 2) + latura_patrat);
+    var fill = evt.gamma + 90 + latura_patrat;
+    context.fillRect(centru.x - fill, centru.y - fill , fill, fill);
 }
-
-52
-4
