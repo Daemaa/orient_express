@@ -14,5 +14,5 @@ function on_device_orientation(evt){
     context.fillStyle = "#228B22";
     context.beginPath();
     var fill = evt.gamma + 90 + latura_patrat;
-    context.fillRect(centru.x, centru.y, fill, fill);
+    context.fillRect(centru.x - fill/2, centru.y - fill/2, fill, fill);
 }
